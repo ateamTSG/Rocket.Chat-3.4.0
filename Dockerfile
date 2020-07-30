@@ -2,6 +2,8 @@ FROM node:12.16.1-buster-slim
 
 LABEL maintainer="buildmaster@rocket.chat"
 
+ENV NPM_CONFIG_LOGLEVEL=warn
+
 # dependencies
 RUN groupadd -g 65533 -r rocketchat \
     && useradd -u 65533 -r -g rocketchat rocketchat \
